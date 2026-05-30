@@ -1,0 +1,8 @@
+com\cssweng\reportbuilder\repository\ReportJobRepository.class
+com\cssweng\reportbuilder\domain\School.class
+com\cssweng\reportbuilder\repository\ReportTemplateRepository.class
+com\cssweng\reportbuilder\repository\SchoolRepository.class
+com\cssweng\reportbuilder\repository\AppUserRepository.class
+com\cssweng\reportbuilder\domain\ReportTemplate.class
+com\cssweng\reportbuilder\domain\AppUser.class
+com\cssweng\reportbuilder\domain\ReportJob.class
