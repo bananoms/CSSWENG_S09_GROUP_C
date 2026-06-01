@@ -1,8 +1,10 @@
 package com.cssweng.reportbuilder.repository;
 
-import com.cssweng.reportbuilder.domain.School;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import com.cssweng.reportbuilder.model.School;
+
 import java.util.UUID;
 
 @Repository

@@ -1,4 +1,6 @@
-# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+# Maven
+target/
+.mvn/wrapper/maven-wrapper.jar
 
 # Compiled output
 /dist
@@ -19,6 +21,9 @@ yarn-error.log
 *.launch
 .settings/
 *.sublime-workspace
+*.iml
+*.iws
+*.ipr
 
 # Visual Studio Code
 .vscode/*
@@ -42,3 +47,25 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Spring Boot
+*.jar
+*.war
+*.ear
+
+# Logs
+*.log
+logs/
+
+# Environment / Secrets
+application-local.properties
+application-secrets.properties
+.env
+
+# Test output
+/test-output/

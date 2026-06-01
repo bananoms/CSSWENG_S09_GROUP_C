@@ -1,4 +1,4 @@
-package com.cssweng.reportbuilder.domain;
+package com.cssweng.reportbuilder.model;
 
 import jakarta.persistence.*;
 import java.util.UUID;
