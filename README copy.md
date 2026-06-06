@@ -1,6 +1,14 @@
-# SchoolDocumentMaker
+# Edusuite | School Document Maker
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.12.
+
+## Backend server
+
+To start the local Spring Boot development server, ensure PostgreSQL is running with a database named `edusuite_reports`, user `postgres`, and password `hello123`. Navigate to the project root and run:
+
+```bash
+./mvnw spring-boot:run
+```
 
 ## Development server
 
@@ -11,6 +19,14 @@ ng serve
 ```
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+
+## API documentation
+
+### Fetch report templates
+* **Endpoint:** `GET /api/templates`
+* **Description:** Fetches all report templates from the PostgreSQL database.
+* **Response (200 OK):** Returns a JSON array of template objects.
+* **Error (500):** Returns an error if the database connection fails.
 
 ## Code scaffolding
 

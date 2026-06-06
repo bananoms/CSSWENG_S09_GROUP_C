@@ -93,9 +93,31 @@
     <h1>Edusuite | School Document Maker</h1>
 </div>
 <main class="main">
-  <div class="content">
+  <div class="content" style="flex-direction: column; align-items: center;">
     <div>
       <p>Hello World</p>
+    </div>
+
+    <div style="margin-top: 3rem; padding: 20px; border-top: 2px solid var(--gray-400); width: 100%;">
+      <h3 style="color: var(--gray-900);">Backend Connection:</h3>
+
+      @if (errorMessage()) {
+        <p style="color: var(--hot-red);">{{ errorMessage() }}</p>
+      }
+
+      @if (!errorMessage() && templates().length === 0) {
+        <p style="color: var(--pill-accent);">
+          Connected successfully!
+        </p>
+      }
+
+      @if (templates().length > 0) {
+        <ul>
+          @for (template of templates(); track template.id) {
+            <li><pre>{{ template | json }}</pre></li>
+          }
+        </ul>
+      }
     </div>
   </div>
 </main>
