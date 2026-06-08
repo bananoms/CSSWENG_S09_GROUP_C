@@ -18,6 +18,7 @@ export const routes: Routes = [
       { path: 'templates', component: Templates },
       { path: 'generate-report', component: GenerateReport },
       { path: 'archives', component: Archives },
+      { path: 'builder', component: PdfDesigner },
     ]
   },
   { path: '**', component: NotFound }
