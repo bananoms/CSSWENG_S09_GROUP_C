@@ -1,0 +1,91 @@
+<div class="generate-report-container">
+  
+  <div class="page-header">
+    <div class="title-area">
+      <h2 class="page-title">Generate Report</h2>
+      <span class="active-template-badge">Template: {{ templateName }}</span>
+    </div>
+    
+    <div class="filters-row">
+      <div class="filter-group">
+        <select [(ngModel)]="schoolYear" class="dashboard-select">
+          <option value="2025-2026">SY 2025-2026</option>
+          <option value="etc">etc</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <select [(ngModel)]="term" class="dashboard-select">
+          <option value="1st Semester">1st Semester</option>
+          <option value="etc">etc</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <select [(ngModel)]="gradeLevel" class="dashboard-select">
+          <option value="Grade 11">Grade 11</option>
+          <option value="etc">etc</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <select [(ngModel)]="section" class="dashboard-select">
+          <option value="AXX">Section AXX</option>
+          <option value="BXX">Section BXX</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="report-workspace-section">
+    
+    <div class="selection-control-header">
+      <h3 class="section-heading">Recipient Selection</h3>
+      <label class="select-all-label">
+        <input type="checkbox" [checked]="allSelected" (change)="toggleAll($event)" class="dashboard-checkbox" />
+        <span class="label-text">Select All ({{ students.length }} students)</span>
+      </label>
+    </div>
+
+    <div class="table-responsive">
+      <table class="dashboard-table">
+        <thead>
+          <tr>
+            <th width="40"></th>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Section</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let s of students" [class.row-selected]="s.selected">
+            <td>
+              <input type="checkbox" [(ngModel)]="s.selected" class="dashboard-checkbox" />
+            </td>
+            <td>{{ s.id }}</td>
+            <td>{{ s.name }}</td>
+            <td>{{ s.section }}</td>
+            <td>
+              <span class="status-badge" [class.active]="s.status === 'Active'">
+                {{ s.status }}
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="action-panel-card">
+    <div class="action-info">
+      <span class="summary-text" *ngIf="selectedCount > 0">
+        Ready to build report payloads for <strong>{{ selectedCount }}</strong> recipient(s).
+      </span>
+      <span class="summary-text warning" *ngIf="selectedCount === 0">
+        Please select at least one student from the roster above to compile the document structure.
+      </span>
+    </div>
+    <button class="generate-action-btn" (click)="generateReport()" [disabled]="selectedCount === 0">
+      Generate Report ({{ selectedCount }})
+    </button>
+  </div>
+
+</div>

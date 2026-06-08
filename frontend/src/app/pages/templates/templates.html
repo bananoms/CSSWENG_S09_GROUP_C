@@ -1,0 +1,29 @@
+<div class="templates-page">
+  <div class="page-header">
+    <h2 class="page-title">Report Templates</h2>
+  </div>
+
+  <div class="templates-grid">
+    <div
+      class="template-card"
+      *ngFor="let t of templates"
+      (click)="openTemplate(t.id, t.name)"
+      [title]="t.name"
+    >
+      <div class="template-thumbnail">
+        <img [src]="t.image" [alt]="t.name" class="template-preview-img" />
+      </div>
+      <div class="template-label">{{ t.name }}</div>
+    </div>
+
+    <div class="template-card add-card" (click)="addTemplate()">
+      <div class="template-thumbnail add-thumbnail">
+        <div class="add-icon">
+          <span class="h-bar"></span>
+          <span class="v-bar"></span>
+        </div>
+      </div>
+      <div class="template-label">Add Template</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,131 @@
+.templates-page {
+  padding: 28px 32px;
+  background: #ffffff;
+  min-height: 100%;
+}
+
+.page-header {
+  margin-bottom: 28px;
+}
+
+.page-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #2c2c2c;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+/* ── Grid ── */
+.templates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+  gap: 28px 24px;
+}
+
+/* ── Card ── */
+.template-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.template-card:hover .template-thumbnail {
+  border-color: #9a9a9a;
+  background: #e8e8e8;
+}
+
+.template-card:hover .template-label {
+  color: #1a1a1a;
+}
+
+.template-thumbnail {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background: #e0e0e0;
+  border: 1.5px solid #c8c8c8;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.15s, background 0.15s;
+  position: relative;
+  overflow: hidden;
+}
+
+.template-preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       
+  object-position: top center; 
+  display: block;
+}
+
+/* ── Label ── */
+.template-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #4a4a4a;
+  text-align: center;
+  transition: color 0.15s;
+}
+
+/* ── Add Template card ── */
+.add-card .add-thumbnail {
+  background: #f4f4f4;
+  border: 1.5px solid #c8c8c8;
+  border-radius: 50%;
+  width: 72px;
+  height: 72px;
+  aspect-ratio: 1;
+  align-self: center;
+}
+
+.add-card {
+  justify-content: center;
+  gap: 12px;
+}
+
+.add-thumbnail {
+  position: relative;
+}
+
+.add-icon {
+  position: relative;
+  width: 28px;
+  height: 28px;
+}
+
+.h-bar,
+.v-bar {
+  position: absolute;
+  background: #6b6b6b;
+  border-radius: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.h-bar {
+  width: 22px;
+  height: 2.5px;
+}
+
+.v-bar {
+  width: 2.5px;
+  height: 22px;
+}
+
+.add-card:hover .add-thumbnail {
+  background: #e8e8e8;
+  border-color: #9a9a9a;
+}
+
+.add-card:hover .h-bar,
+.add-card:hover .v-bar {
+  background: #333;
+}
