@@ -1,6 +1,12 @@
 # Maven
-target/
-.mvn/wrapper/maven-wrapper.jar
+**/target/
+**/.mvn/wrapper/maven-wrapper.jar
+**/*.class
+
+# Springboot
+*.jar
+*.war
+*.ear
 
 # Compiled output
 /dist
@@ -9,7 +15,14 @@ target/
 /bazel-out
 
 # Node
-/node_modules
+**/node_modules/
+**/.angular/
+**/dist/
+**/tmp/
+**/out-tsc/
+**/bazel-out/
+**/coverage/
+**/__screenshots__/
 npm-debug.log
 yarn-error.log
 
@@ -53,19 +66,18 @@ Thumbs.db
 .project
 .settings/
 
-# Spring Boot
-*.jar
-*.war
-*.ear
-
 # Logs
 *.log
 logs/
+testem.log
+/libpeerconnection.log
 
 # Environment / Secrets
-application-local.properties
-application-secrets.properties
+**/application-local.properties
+**/application-secrets.properties
 .env
+.env.local
+.env.*.local
 
 # Test output
-/test-output/
+**/test-output/
