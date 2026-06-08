@@ -1,0 +1,7 @@
+<h2>Report Templates</h2>
+<ul>
+  <li *ngFor="let t of templates">
+    <a (click)="openTemplate(t.id, t.name)" style="cursor:pointer; color:blue;">{{ t.name }}</a>
+</li>
+</ul>
+<button>+ Add Template</button>

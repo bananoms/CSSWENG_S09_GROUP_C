@@ -1,0 +1,199 @@
+.generate-report-container {
+  padding: 24px;
+  background: #ffffff;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-family: system-ui, -apple-system, sans-serif;
+  box-sizing: border-box;
+}
+
+/* ── Header and Filter Layout ── */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 16px;
+}
+
+.page-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #2c2c2c;
+  margin: 0 0 6px 0;
+  letter-spacing: 0.01em;
+}
+
+.active-template-badge {
+  font-size: 11px;
+  font-weight: 500;
+  color: #666666;
+  background: #f0f0f0;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.filters-row {
+  display: flex;
+  gap: 10px;
+}
+
+.dashboard-select {
+  background: #e0e0e0;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #222222;
+  cursor: pointer;
+  outline: none;
+}
+
+.dashboard-select:hover {
+  background: #d8d8d8;
+}
+
+/* ── Workspace Section ── */
+.report-workspace-section {
+  background: #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1;
+}
+
+.selection-control-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.section-heading {
+  font-size: 12px;
+  font-weight: 600;
+  color: #222222;
+  margin: 0;
+}
+
+.select-all-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.label-text {
+  font-size: 11px;
+  font-weight: 600;
+  color: #333333;
+}
+
+/* ── Table Styling ── */
+.table-responsive {
+  overflow-x: auto;
+}
+
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.dashboard-table th {
+  font-size: 11px;
+  font-weight: 600;
+  color: #222222;
+  padding: 10px 8px;
+  border-bottom: 1.5px solid #aaaaaa;
+}
+
+.dashboard-table td {
+  font-size: 11px;
+  font-weight: 500;
+  color: #333333;
+  padding: 10px 8px;
+  border-bottom: 1px solid #cccccc;
+  transition: background 0.15s;
+}
+
+.dashboard-table tr:hover td {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.dashboard-table tr.row-selected td {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Custom Checkbox Size Adjustment */
+.dashboard-checkbox {
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+
+/* ── Status Badge ── */
+.status-badge {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: #999999;
+  color: #ffffff;
+}
+
+.status-badge.active {
+  background: #39ff73;
+  color: #004d1a;
+}
+
+/* add other status-badges like ongoing etc/
+
+/* ── Bottom Action Card Panel ── */
+.action-panel-card {
+  background: #e0e0e0;
+  border-radius: 8px;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summary-text {
+  font-size: 11px;
+  color: #333333;
+}
+
+.summary-text.warning {
+  color: #c0392b;
+  font-weight: 500;
+}
+
+.generate-action-btn {
+  background: #2b2b2b;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.15s, opacity 0.15s;
+}
+
+.generate-action-btn:hover:not(:disabled) {
+  background: #1a1a1a;
+}
+
+.generate-action-btn:disabled {
+  background: #aaaaaa;
+  color: #777777;
+  cursor: not-allowed;
+}

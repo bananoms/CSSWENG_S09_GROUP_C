@@ -1,0 +1,55 @@
+<h2>Generate Report</h2>
+<p>Template: <strong>{{ templateName }}</strong></p>
+
+<div class="filters">
+  <label>School Year
+    <select [(ngModel)]="schoolYear">
+      <option>2025-2026</option>
+      <option>etc</option>
+    </select>
+  </label>
+  <label>Term
+    <select [(ngModel)]="term">
+      <option>1st Semester</option>
+      <option>etc</option>
+    </select>
+  </label>
+  <label>Grade Level
+    <select [(ngModel)]="gradeLevel">
+      <option>Grade 11</option>
+      <option>etc</option>
+    </select>
+  </label>
+  <label>Section
+    <select [(ngModel)]="section">
+      <option>AXX</option>
+      <option>BXX</option>
+    </select>
+  </label>
+</div>
+
+<br />
+<label>
+  <input type="checkbox" [checked]="allSelected" (change)="toggleAll($event)" />
+  Select All ({{ students.length }} students)
+</label>
+
+<table border="1" cellpadding="8" width="100%">
+  <thead>
+    <tr><th></th><th>Student ID</th><th>Name</th><th>Section</th><th>Status</th></tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let s of students">
+      <td><input type="checkbox" [(ngModel)]="s.selected" /></td>
+      <td>{{ s.id }}</td>
+      <td>{{ s.name }}</td>
+      <td>{{ s.section }}</td>
+      <td>{{ s.status }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<br />
+<button (click)="generateReport()" [disabled]="selectedCount === 0">
+  Generate Report ({{ selectedCount }} selected)
+</button>

@@ -1,0 +1,125 @@
+.archives-container {
+  padding: 24px;
+  background: #ffffff;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-family: system-ui, -apple-system, sans-serif;
+  box-sizing: border-box;
+}
+
+/* ── Page Header ── */
+.page-header {
+  margin-bottom: 4px;
+}
+
+.page-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #2c2c2c;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+/* ── Archives Main Workspace Wrapper ── */
+.archives-section {
+  background: #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1;
+}
+
+.section-header-row {
+  margin-bottom: 16px;
+}
+
+.section-heading {
+  font-size: 12px;
+  font-weight: 600;
+  color: #222222;
+  margin: 0;
+}
+
+/* ── Table Styling ── */
+.table-responsive {
+  overflow-x: auto;
+}
+
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.dashboard-table th {
+  font-size: 11px;
+  font-weight: 600;
+  color: #222222;
+  padding: 10px 8px;
+  border-bottom: 1.5px solid #aaaaaa;
+}
+
+.dashboard-table td {
+  font-size: 11px;
+  font-weight: 500;
+  color: #333333;
+  padding: 12px 8px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.font-semibold {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/* Alignments */
+.text-right {
+  text-align: right;
+}
+
+/* ── Status Badges ── */
+.status-badge {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: #999999;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+}
+
+.status-badge.completed {
+  background: #39ff73; 
+  color: #004d1a;
+}
+
+/*TODO: add other status-badge*/
+
+/* ── Table Download Button ── */
+.table-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #2b2b2b;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 10.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.table-action-btn:hover {
+  background: #1a1a1a;
+}
+
+.btn-icon {
+  width: 11px;
+  height: 11px;
+  stroke: currentColor;
+}

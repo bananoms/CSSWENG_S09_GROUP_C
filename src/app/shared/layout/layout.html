@@ -1,0 +1,15 @@
+<div class="shell">
+  <aside class="sidebar">
+    <p><strong>SCHOOL ADMIN PORTAL</strong></p>
+    <nav>
+      <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+      <a routerLink="/templates" routerLinkActive="active">Report Templates</a>
+      <a routerLink="/generate-report" routerLinkActive="active">Generate Report</a>
+      <a routerLink="/archives" routerLinkActive="active">Report Archives</a>
+    </nav>
+    <button>Logout</button>
+  </aside>
+  <main class="content">
+    <router-outlet />
+  </main>
+</div>
